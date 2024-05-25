@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import ESP32DataView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/esp32/', ESP32DataView.as_view(), name='esp32_data'),
 ]

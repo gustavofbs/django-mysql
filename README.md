@@ -10,8 +10,9 @@ No Arduino-IDE:
 
 Para o ngrok conhecer as urls a partir da porta 8000, foi necessário o seguinte código:
 
+``` Python
 ./ngrok http 8000 
   --forwards "http://localhost:8000/api/esp32/ -> /api/esp32/" \
   --forwards "http://localhost:8000/api/esp32/data/ -> /api/esp32/data/" \
   --forwards "http://localhost:8000/api/esp32/data/delete/ -> /api/esp32/data/delete/"
-
+```

@@ -8,4 +8,10 @@ No Vscode:
 No Arduino-IDE:
 ![image](https://github.com/gustavofbs/django-mysql/assets/61592832/4ccc28cb-0859-451c-a4a3-22689c6d6b66)
 
+Para o ngrok conhecer as urls a partir da porta 8000, foi necessário o seguinte código:
+
+./ngrok http 8000 
+  --forwards "http://localhost:8000/api/esp32/ -> /api/esp32/" \
+  --forwards "http://localhost:8000/api/esp32/data/ -> /api/esp32/data/" \
+  --forwards "http://localhost:8000/api/esp32/data/delete/ -> /api/esp32/data/delete/"
 

@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import ESP32DataView
+from .views import ESP32DataView, ESP32DataListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/esp32/', ESP32DataView.as_view(), name='esp32_data'),
+    path('api/esp32/data/', ESP32DataListView.as_view(), name='esp32_data_list'),
 ]

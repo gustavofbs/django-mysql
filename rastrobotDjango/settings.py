@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9rlve8vtic!h1oa%7n4**c4(-un+t=w#q#3%q!@m$0431j-m37
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rastrobotDjango'
 ]
 
 MIDDLEWARE = [

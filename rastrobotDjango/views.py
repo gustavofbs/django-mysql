@@ -29,3 +29,9 @@ class ESP32DataListView(APIView):
         serializer = ESP32DataSerializer(queryset, many=True)
         return Response(serializer.data)
 
+class ESP32DataDeleteView(APIView):
+    def delete(self, request, format=None):
+        # Excluir todas as requisições no banco de dados
+        ESP32Data.objects.all().delete()
+        return Response({'message': 'Todas as requisições excluídas com sucesso!'}, status=status.HTTP_204_NO_CONTENT)
+
